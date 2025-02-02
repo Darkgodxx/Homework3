@@ -11,8 +11,8 @@ public class SelTest {
     public void set () {
         WebDriver driver = new ChromeDriver();
         driver.get("https://the-internet.herokuapp.com/");
-        List <WebElement> elements = driver.findElements(By.tagName("li"));
+        List <WebElement> elements = driver.findElements(By.tagName("a"));
         WebElement ex = elements.get(9);
-        ex.findElement(By.linkText("Drag and Drop")).click();
+        ex.click();
     }
 }
