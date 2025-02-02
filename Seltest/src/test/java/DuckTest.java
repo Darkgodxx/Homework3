@@ -87,5 +87,6 @@ public class DuckTest {
         driver.get("https://demo.guru99.com/test/simple_context_menu.html");
         WebElement element = driver.findElement(By.cssSelector("[ondblclick=\"myFunction()\"]"));
         actions.doubleClick(element).perform();
+        driver.quit();
     }
 }
