@@ -8,10 +8,10 @@ import java.util.List;
 
 public class SelTest {
     @Test
-    public void set () {
+    public void set() {
         WebDriver driver = new ChromeDriver();
         driver.get("https://the-internet.herokuapp.com/");
-        List <WebElement> elements = driver.findElements(By.tagName("a"));
+        List<WebElement> elements = driver.findElements(By.tagName("a"));
         WebElement ex = elements.get(9);
         ex.click();
     }

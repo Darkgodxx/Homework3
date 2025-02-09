@@ -10,9 +10,9 @@ import org.testng.annotations.Test;
 
 public class DuckTest {
     @Test
-    public void duckTest1 (){
+    public void duckTest1() {
         String title;
-        String titleActual = "Online Store | My Store";
+        String titleeExpected = "Online Store | My Store";
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--ignore-certificate-errors");
         WebDriver driver = new ChromeDriver(options);
@@ -20,13 +20,14 @@ public class DuckTest {
         WebElement element = driver.findElement(By.cssSelector("[id=site-menu-wrapper] [class=general-0]"));
         element.click();
         title = driver.getTitle();
-        Assert.assertEquals(title, titleActual);
+        Assert.assertEquals(title, titleeExpected);
         driver.quit();
     }
+
     @Test
-    public void duckTest2 (){
+    public void duckTest2() {
         String title;
-        String titleActual = "Rubber Ducks";
+        String titleeExpected = "Rubber Ducks";
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--ignore-certificate-errors");
         WebDriver driver = new ChromeDriver(options);
@@ -35,13 +36,14 @@ public class DuckTest {
         element.click();
         WebElement element1 = driver.findElement(By.xpath("//div[@id=\"box-category\"]/h1[@class=\"title\"]"));
         title = element1.getText();
-        Assert.assertEquals(title, titleActual);
+        Assert.assertEquals(title, titleeExpected);
         driver.quit();
     }
+
     @Test
-    public void duckTest3 (){
+    public void duckTest3() {
         String title;
-        String titleActual = "Subcategory | My Store";
+        String titleeExpected = "Subcategory | My Store";
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--ignore-certificate-errors");
         WebDriver driver = new ChromeDriver(options);
@@ -52,11 +54,12 @@ public class DuckTest {
         WebElement element1 = driver.findElement(By.cssSelector("[id=site-menu-wrapper] [class=category-2]"));
         element1.click();
         title = driver.getTitle();
-        Assert.assertEquals(title, titleActual);
+        Assert.assertEquals(title, titleeExpected);
         driver.quit();
     }
+
     @Test
-    public void duckTest4 (){
+    public void duckTest4() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--ignore-certificate-errors");
         WebDriver driver = new ChromeDriver(options);
@@ -64,11 +67,12 @@ public class DuckTest {
         driver.get("https://learn.javascript.ru/article/mouse-drag-and-drop/ball4/");
         WebElement element = driver.findElement(By.cssSelector("[id=ball]"));
         WebElement element1 = driver.findElement(By.cssSelector("[id=gate]"));
-        actions.dragAndDrop(element,element1).perform();
+        actions.dragAndDrop(element, element1).perform();
         driver.quit();
     }
+
     @Test
-    public void duckTest5 (){
+    public void duckTest5() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--ignore-certificate-errors");
         WebDriver driver = new ChromeDriver(options);
@@ -78,8 +82,9 @@ public class DuckTest {
         actions.contextClick(element).perform();
         driver.quit();
     }
+
     @Test
-    public void duckTest6 (){
+    public void duckTest6() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--ignore-certificate-errors");
         WebDriver driver = new ChromeDriver(options);
