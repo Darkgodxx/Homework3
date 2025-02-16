@@ -1,9 +1,9 @@
-package pages.object;
+package pages.object.test;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.object.CatalogPage;
+import pages.object.TestBase;
 
 public class CatalogTest extends TestBase {
     private String deliveryStatus;
@@ -17,10 +17,8 @@ public class CatalogTest extends TestBase {
 
     @Test
     public void CatalogTest1() {
-        driver.get("https://litecart.stqa.ru/en/rubber-ducks-c-1/");
         CatalogPage catalogPage = new CatalogPage(driver);
-        WebElement element = driver.findElement(By.cssSelector("[class=\"link\"][title=\"Purple Duck\"]"));
-        element.click();
+        catalogPage.getPurpleDuck();
         price = catalogPage.getPrice();
         stockStatus = catalogPage.getStockStatus();
         deliveryStatus = catalogPage.getDeliveryStatus();
@@ -31,10 +29,8 @@ public class CatalogTest extends TestBase {
 
     @Test
     public void CatalogTest2() {
-        driver.get("https://litecart.stqa.ru/en/rubber-ducks-c-1/");
         CatalogPage catalogPage = new CatalogPage(driver);
-        WebElement element = driver.findElement(By.cssSelector("[class=\"link\"][title=\"Blue Duck\"]"));
-        element.click();
+        catalogPage.getBlueDuck();
         price = catalogPage.getPrice();
         stockStatus = catalogPage.getStockStatus();
         deliveryStatus = catalogPage.getDeliveryStatus();

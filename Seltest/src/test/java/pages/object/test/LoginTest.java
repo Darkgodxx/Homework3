@@ -1,7 +1,10 @@
-package pages.object;
+package pages.object.test;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.object.LoginMessagePage;
+import pages.object.LoginPage;
+import pages.object.TestBase;
 
 public class LoginTest extends TestBase {
     private String successExpected = "You are now logged in as %s";
@@ -11,7 +14,6 @@ public class LoginTest extends TestBase {
 
     @Test
     public void LoginTest1() {
-        driver.get("https://litecart.stqa.ru/en/");
         LoginPage loginPage = new LoginPage(driver);
         LoginMessagePage loginMessagePage = new LoginMessagePage(driver);
         loginPage.login(login, pass);
@@ -22,7 +24,6 @@ public class LoginTest extends TestBase {
     @Test
     public void LoginTest2() {
         String noticeErrorExpected = "Wrong password or the account is disabled, or does not exist";
-        driver.get("https://litecart.stqa.ru/en/");
         LoginPage loginPage = new LoginPage(driver);
         LoginMessagePage loginMessagePage = new LoginMessagePage(driver);
         loginPage.login("piotr.awfaf.org", pass);
@@ -33,7 +34,6 @@ public class LoginTest extends TestBase {
     @Test
     public void LoginTest3() {
         String noticeErrorExpected = "You must provide both email address and password.";
-        driver.get("https://litecart.stqa.ru/en/");
         LoginPage loginPage = new LoginPage(driver);
         LoginMessagePage loginMessagePage = new LoginMessagePage(driver);
         loginPage.login(login, "");

@@ -3,9 +3,9 @@
 <suite name="test">
     <test name="test">
         <classes>
-            <class name="pages.object.LoginTest"/>
-            <class name="pages.object.BinTest"/>
-            <class name="pages.object.CatalogTest"/>
+            <class name="pages.object.test.LoginTest"/>
+            <class name="pages.object.test.BinTest"/>
+            <class name="pages.object.test.CatalogTest"/>
         </classes>
 
     </test>
