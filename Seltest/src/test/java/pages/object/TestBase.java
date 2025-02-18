@@ -8,16 +8,19 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import pages.object.enums.Browser;
+
 import static pages.object.helpers.Locators.getLocator;
+
 import java.time.Duration;
 
 
 public class TestBase {
     protected WebDriver driver;
     Browser browser = Browser.valueOf(System.getProperty("browser", "chrome"));
+
     @BeforeMethod
     public void methodSetup() {
-        driver = switch (browser){
+        driver = switch (browser) {
             case chrome -> {
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--ignore-certificate-errors");

@@ -13,8 +13,9 @@ import java.time.Duration;
 public class BinTest extends TestBase {
     int quantity;
     int quantityExpected;
+
     @Test
-    public void BinTest1() {
+    public void FindQuantityTest1() {
         quantityExpected = 1;
         BinPage binPage = new BinPage(driver);
         binPage.getRedDuck();
@@ -26,7 +27,7 @@ public class BinTest extends TestBase {
     }
 
     @Test
-    public void BinTest2() {
+    public void FindQuantityTest2() {
         quantityExpected = 2;
         BinPage binPage = new BinPage(driver);
         binPage.getRedDuck();

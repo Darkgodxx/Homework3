@@ -16,7 +16,7 @@ public class CatalogTest extends TestBase {
     private String priceExpected1 = "$20";
 
     @Test
-    public void CatalogTest1() {
+    public void FindCatalogInformationTest1() {
         CatalogPage catalogPage = new CatalogPage(driver);
         catalogPage.getPurpleDuck();
         price = catalogPage.getPrice();
@@ -28,7 +28,7 @@ public class CatalogTest extends TestBase {
     }
 
     @Test
-    public void CatalogTest2() {
+    public void FindCatalogInformationTest2() {
         CatalogPage catalogPage = new CatalogPage(driver);
         catalogPage.getBlueDuck();
         price = catalogPage.getPrice();

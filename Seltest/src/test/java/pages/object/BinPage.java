@@ -16,12 +16,15 @@ public class BinPage {
     public int getIntQuantity() {
         return Integer.parseInt(driver.findElement(quantity).getText());
     }
+
     public By getQuantity() {
         return quantity;
     }
+
     public void getRedDuck() {
         driver.findElement(redDuck).click();
     }
+
     public void getcardProduct() {
         driver.findElement(cardProduct).click();
     }

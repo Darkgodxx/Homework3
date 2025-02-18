@@ -13,7 +13,7 @@ public class LoginTest extends TestBase {
     private String name = "Test Test.";
 
     @Test
-    public void LoginTest1() {
+    public void LoginSuccessTest() {
         LoginPage loginPage = new LoginPage(driver);
         LoginMessagePage loginMessagePage = new LoginMessagePage(driver);
         loginPage.login(login, pass);
@@ -22,7 +22,7 @@ public class LoginTest extends TestBase {
     }
 
     @Test
-    public void LoginTest2() {
+    public void LoginErrorTest1() {
         String noticeErrorExpected = "Wrong password or the account is disabled, or does not exist";
         LoginPage loginPage = new LoginPage(driver);
         LoginMessagePage loginMessagePage = new LoginMessagePage(driver);
@@ -32,7 +32,7 @@ public class LoginTest extends TestBase {
     }
 
     @Test
-    public void LoginTest3() {
+    public void LoginErrorTest2() {
         String noticeErrorExpected = "You must provide both email address and password.";
         LoginPage loginPage = new LoginPage(driver);
         LoginMessagePage loginMessagePage = new LoginMessagePage(driver);

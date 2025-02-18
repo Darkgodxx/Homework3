@@ -26,9 +26,11 @@ public class CatalogPage {
     public String getDeliveryStatus() {
         return driver.findElement(deliveryStatus).getText();
     }
+
     public void getPurpleDuck() {
         driver.findElement(purpleDuck).click();
     }
+
     public void getBlueDuck() {
         driver.findElement(blueDuck).click();
     }
