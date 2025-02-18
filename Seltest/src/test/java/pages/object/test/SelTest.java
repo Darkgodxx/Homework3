@@ -1,18 +1,17 @@
-import org.openqa.selenium.By;
+package pages.object.test;
+
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
+import pages.object.HerokuappPage;
 
-import java.util.List;
 
 public class SelTest {
     @Test
-    public void set () {
+    public void FindNineElementTest() {
         WebDriver driver = new ChromeDriver();
+        HerokuappPage herokuappPage = new HerokuappPage(driver);
         driver.get("https://the-internet.herokuapp.com/");
-        List <WebElement> elements = driver.findElements(By.tagName("a"));
-        WebElement ex = elements.get(9);
-        ex.click();
+        herokuappPage.HerokuappElement();
     }
 }
